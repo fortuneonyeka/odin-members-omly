@@ -1,0 +1,15 @@
+
+
+<h1>Articles</h1>
+<%= link_to "Register", new_user_registration_path%><br>
+<%= button_to "Sign out", destroy_user_session_path, method: :delete %><br>
+<%= link_to "Create Post", new_post_path %><br>
+Our blog has <%= @posts.count %> articles and counting!
+
+<ul>
+  <% @posts.each do |post| %>
+    <li class="list-unstyled">
+      <%= link_to post.title, post%>
+    </li>
+  <% end %>
+</ul>
