@@ -1,0 +1,16 @@
+
+
+<h1>Articles</h1>
+Our blog has <%= @posts.count %> articles and counting!
+
+
+      <div class="container">
+     
+  <% @posts.each do |post| %>
+    <div class="p-4 border m-3 ">
+      <%= link_to post.title, post, :class => "text-decoration-none link-dark text-capitalize"%>
+    </div>
+  <% end %>
+    
+    </div>
+
